@@ -2,7 +2,7 @@ module foobar
 
 go 1.17
 
-require github.com/icexin/eggos v0.4.1
+require github.com/icexin/eggos v0.4.2-0.20220210143254-4892e84bae98
 
 require (
 	github.com/google/btree v1.0.1 // indirect

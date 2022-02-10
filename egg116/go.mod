@@ -2,7 +2,7 @@ module foobar
 
 go 1.17
 
-require github.com/icexin/eggos v0.4.1
+require github.com/icexin/eggos v0.4.2-0.20220210143254-4892e84bae98
 
 require (
 	github.com/google/btree v1.0.1 // indirect
@@ -14,5 +14,3 @@ require (
 	golang.org/x/time v0.0.0-20191024005414-555d28b269f0 // indirect
 	gvisor.dev/gvisor v0.0.0-20210716193733-566c23a60eea // indirect
 )
-
-replace github.com/icexin/eggos => github.com/mewpull/eggos v0.4.2-0.20220209155317-00ae22454a8b
