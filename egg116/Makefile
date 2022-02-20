@@ -18,14 +18,15 @@ run: kernel.elf
 
 # Qemu options:
 #
-#    -s   Shorthand for -gdb tcp::1234, i.e. open a gdb‐server on TCP port 1234
-#    -S   Do not start CPU at startup (you must type 'c' in the monitor).
+#    -s       Shorthand for -gdb tcp::1234, i.e. open a gdb‐server on TCP port 1234
+#    -S       Do not start CPU at startup (you must type 'c' in the monitor).
+#    -d int   enable logging of interrupts/exceptions in short format
 #
 # NOTE: to debug with Delve, run:
 #
 #    ./debug.sh
 debug: kernel.elf
-	env QEMU_OPTS="-s -S" GOROOT="`go1.16 env GOROOT`" egg run $<
+	env QEMU_OPTS="-gdb tcp::1234 -S -d int" GOROOT="`go1.16 env GOROOT`" egg run $<
 
 clean:
 	$(RM) kernel.elf kernel.iso
